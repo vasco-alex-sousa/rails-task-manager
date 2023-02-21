@@ -13,149 +13,168 @@
  *= require_tree .
  *= require_self
  */
-/* Add a trash can icon for delete action */
-/* Add a trash can icon for delete action */
-.delete-link {
-  color: red;
-}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  }
 
-/* Styling for the New Task button */
-.new-task {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
+  h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  }
 
-.new-task:hover {
-  background-color: #0069d9;
-}
+  /* Navigation Styles */
+  nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-/* Styling for the update task button */
-.update-task {
+  nav a {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.2s ease-in-out;
+  }
+
+  nav a:hover {
+  color: #007bff;
+  }
+
+  /* List Styles */
+  ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  ul.no-bullets li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  }
+
+  ul.no-bullets li:last-child {
+  margin-bottom: 0;
+  }
+
+  ul.no-bullets li a {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  }
+
+  ul.no-bullets li a:hover {
+  color: #007bff;
+  }
+
+  ul.no-bullets li form {
+  display: inline;
+  }
+
+  ul.no-bullets li form input[type="submit"] {
+  background-color: #dc3545;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease-in-out;
+  }
+
+  ul.no-bullets li form input[type="submit"]:hover {
+  background-color: #c82333;
+  }
+
+  ul.no-bullets li a.edit-link {
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+  }
+
+  ul.no-bullets li a.edit-link:hover {
+  color: #0056b3;
+  }
+
+  /* Form Styles */
+  form {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  }
+
+  form label {
   display: block;
-  margin: 0 auto;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #28a745;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  margin-top: 10px;
-}
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  }
 
-.update-task:hover {
-  background-color: #218838;
-}
-
-/* Styling for the edit task button */
-.edit-task {
-  display: block;
-  margin: 0 auto;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  margin-top: 10px;
-}
-
-.edit-task:hover {
-  background-color: #0069d9;
-}
-
-/* Styling for the task info box */
-.task-info {
-  padding: 10px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.task-info h2 {
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.task-info p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-/* Styling for the task form */
-.task-form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.task-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.task-form input[type="text"],
-.task-form textarea {
+  form input[type="text"],
+  form textarea {
   display: block;
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s ease-in-out;
+  }
 
-.task-form button[type="submit"] {
-  display: block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
+  form input[type="text"]:focus,
+  form textarea:focus {
+  border-color: #007bff;
+  }
+
+  form input[type="submit"] {
   background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+  }
 
-.task-form button[type="submit"]:hover {
-  background-color: #0069d9;
-}
+  form input[type="submit"]:hover {
+    background-color: #0056b3;
+    }
 
-/* Overall styling for the tasks webpage */
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-}
+    form a.back-link {
+    color: #007bff;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.2s ease-in-out;
+    }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    form a.back-link:hover {
+    color: #0056b3;
+    }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+    /* Article Show Styles */
+    article {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    }
 
-.no-bullets {
-  list-style-type: none;
-  margin-top: 20px;
-}
+    article p {
+    margin-bottom: 0;
+    }
 
+    article a.edit-link {
+    color: #007bff;
+    transition: color 0.2s ease-in-out;
+    }
 
-.alert {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 5px;
-}
+    article a.edit-link:hover {
+    color: #0056b3;
+    }
