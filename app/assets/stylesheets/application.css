@@ -13,3 +13,149 @@
  *= require_tree .
  *= require_self
  */
+/* Add a trash can icon for delete action */
+/* Add a trash can icon for delete action */
+.delete-link {
+  color: red;
+}
+
+/* Styling for the New Task button */
+.new-task {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.new-task:hover {
+  background-color: #0069d9;
+}
+
+/* Styling for the update task button */
+.update-task {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.update-task:hover {
+  background-color: #218838;
+}
+
+/* Styling for the edit task button */
+.edit-task {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.edit-task:hover {
+  background-color: #0069d9;
+}
+
+/* Styling for the task info box */
+.task-info {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.task-info h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.task-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the task form */
+.task-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.task-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.task-form input[type="text"],
+.task-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-form button[type="submit"] {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.task-form button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+/* Overall styling for the tasks webpage */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.no-bullets {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+
+.alert {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
